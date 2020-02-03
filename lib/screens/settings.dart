@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tabs/providers/settingsState.dart';
+import 'package:tabs/utils/constants.dart';
 
 class Settings extends StatelessWidget {
   static const String id = "/settings";
@@ -21,7 +22,7 @@ class Settings extends StatelessWidget {
             children: <Widget>[
               Text(
                 "Currency",
-                style: Theme.of(context).textTheme.headline6,
+                style: Constants.headline6,
               ),
               Wrap(
                 spacing: 8,

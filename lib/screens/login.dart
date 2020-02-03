@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tabs/services/auth.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:tabs/utils/constants.dart';
 import './home.dart';
 import './forgot_pass.dart';
 
@@ -94,9 +95,7 @@ class _LoginState extends State<Login> {
                       children: <Widget>[
                         Text(
                           "Welcome Back",
-                          style: Theme.of(context)
-                              .textTheme
-                              .headline4
+                          style: Constants.headline4
                               .copyWith(color: Theme.of(context).primaryColor),
                         ),
                         SizedBox(height: 36),
@@ -140,7 +139,7 @@ class _LoginState extends State<Login> {
                               FlatButton(
                                 child: Text(
                                   "Forgot your password?",
-                                  style: Theme.of(context).textTheme.bodyText2,
+                                  style: Theme.of(context).textTheme.body2,
                                 ),
                                 onPressed: () {
                                   Navigator.push(

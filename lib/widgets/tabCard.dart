@@ -4,6 +4,7 @@ import 'package:flutter_money_formatter/flutter_money_formatter.dart';
 import 'package:provider/provider.dart';
 import 'package:tabs/providers/filterState.dart';
 import 'package:tabs/providers/settingsState.dart';
+import 'package:tabs/utils/constants.dart';
 import 'package:timeago/timeago.dart' as timeago;
 import 'package:tabs/widgets/tabModal.dart';
 
@@ -39,14 +40,12 @@ class TabCard extends StatelessWidget {
             children: <Widget>[
               Text(
                 this.tab["name"],
-                style: Theme.of(context).textTheme.subtitle1,
+                style: Constants.subtitle1,
               ),
               Text(
                 "${Provider.of<SettingsState>(context).selectedCurrency} ${FlutterMoneyFormatter(amount: this.tab["amount"]).output.nonSymbol}",
-                style: Theme.of(context)
-                    .textTheme
-                    .headline5
-                    .copyWith(fontWeight: FontWeight.bold),
+                style:
+                    Constants.headline5.copyWith(fontWeight: FontWeight.bold),
               ),
               Chip(
                 backgroundColor: this.tab["closed"] == true
@@ -77,7 +76,7 @@ class TabCard extends StatelessWidget {
                     if (this.tab["closed"] == true)
                       Text(
                         "Closed",
-                        style: Theme.of(context).textTheme.bodyText2,
+                        style: Theme.of(context).textTheme.body2,
                       ),
                     Text(
                       timeago.format(this.tab["closed"] == true

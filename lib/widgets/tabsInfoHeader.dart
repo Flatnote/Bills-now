@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:tabs/providers/filterState.dart';
 import 'package:flutter_money_formatter/flutter_money_formatter.dart';
 import 'package:tabs/providers/settingsState.dart';
+import 'package:tabs/utils/constants.dart';
 
 class TabsInfoHeader extends StatelessWidget {
   final List<DocumentSnapshot> openTabs;
@@ -73,7 +74,7 @@ class TabsInfoHeader extends StatelessWidget {
           Text(
               getTotalAmountFormatted(
                   tabs, Provider.of<SettingsState>(context).selectedCurrency),
-              style: Theme.of(context).textTheme.headline3),
+              style: Constants.headline3),
           SizedBox(
             height: 10,
           ),

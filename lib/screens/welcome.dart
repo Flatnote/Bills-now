@@ -6,6 +6,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:tabs/screens/home.dart';
 import 'package:tabs/screens/login.dart';
 import 'package:tabs/services/auth.dart';
+import 'package:tabs/utils/constants.dart';
 import './register.dart';
 
 class Welcome extends StatefulWidget {
@@ -39,19 +40,15 @@ class _WelcomeState extends State<Welcome> {
                       mainAxisSize: MainAxisSize.max,
                       children: <Widget>[
                         Text(
-                          "Tabs",
-                          style: Theme.of(context)
-                              .textTheme
-                              .headline3
+                          "Bills Now",
+                          style: Constants.headline3
                               .copyWith(color: Theme.of(context).primaryColor),
                         ),
-                        Text(
-                          "The expense sharing app.",
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyText1
-                              .copyWith(color: Theme.of(context).primaryColor),
-                        ),
+                        Text("The expense sharing app.",
+                            style: Theme.of(context).textTheme.body1.copyWith(
+                                color: Theme.of(context).primaryColor,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500)),
                         SizedBox(height: 50),
                         Image(
                           image: AssetImage(

@@ -7,6 +7,7 @@ import 'package:tabs/providers/suggestionsState.dart';
 import 'package:tabs/services/contacts.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:tabs/providers/settingsState.dart';
+import 'package:tabs/utils/constants.dart';
 
 // TODO: refactor this monstrosity of a class
 
@@ -123,7 +124,7 @@ class _CreateFormState extends State<CreateForm> {
         children: <Widget>[
           Text(
             title,
-            style: Theme.of(context).textTheme.headline4,
+            style: Constants.headline4,
           ),
           Text(description),
           if (suggestions != null && suggestions.length > 0)
@@ -266,7 +267,7 @@ class _CreateFormState extends State<CreateForm> {
         option: IconButton(
           color: userOwesFriend ? Colors.red : Theme.of(context).primaryColor,
           icon: Icon(Icons.swap_horiz),
-          visualDensity: VisualDensity.comfortable,
+          // visualDensity: VisualDensity.comfortable,
           enableFeedback: true,
           tooltip: "Tap to change who owes who",
           onPressed: () {

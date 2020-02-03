@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tabs/services/auth.dart';
+import 'package:tabs/utils/constants.dart';
 
 class ForgotPass extends StatefulWidget {
   @override
@@ -47,12 +48,11 @@ class _ForgotPassState extends State<ForgotPass> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
-                      Text("Forgot Your Password?",
-                          style: Theme.of(context).textTheme.headline4),
+                      Text("Forgot Your Password?", style: Constants.headline4),
                       SizedBox(height: 8),
                       Text(
                         "Enter your email and we'll send you instructions.",
-                        style: Theme.of(context).textTheme.bodyText2,
+                        style: Theme.of(context).textTheme.body2,
                       ),
                       SizedBox(height: 36),
                       TextFormField(
@@ -76,14 +76,11 @@ class _ForgotPassState extends State<ForgotPass> {
               : Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text("Reset email sent to",
-                        style: Theme.of(context).textTheme.headline5),
+                    Text("Reset email sent to", style: Constants.headline5),
                     // SizedBox(height: 12),
-                    Text(_emailController.text,
-                        style: Theme.of(context).textTheme.subtitle1),
+                    Text(_emailController.text, style: Constants.subtitle1),
                     SizedBox(height: 36),
-                    Text("Please check your email",
-                        style: Theme.of(context).textTheme.subtitle1),
+                    Text("Please check your email", style: Constants.subtitle1),
                   ],
                 ),
         ),

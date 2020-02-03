@@ -5,6 +5,7 @@ import 'package:flutter_money_formatter/flutter_money_formatter.dart';
 import 'package:provider/provider.dart';
 import 'package:tabs/controllers/tabsController.dart';
 import 'package:tabs/providers/settingsState.dart';
+import 'package:tabs/utils/constants.dart';
 import 'package:tabs/widgets/changeAmountDialog.dart';
 import 'package:intl/intl.dart';
 
@@ -39,10 +40,8 @@ class TabModal extends StatelessWidget {
                 this.tab["userOwesFriend"] == true
                     ? "I Owe ${this.tab["name"]}"
                     : "${this.tab["name"]}'s Tab",
-                style: Theme.of(context)
-                    .textTheme
-                    .headline5
-                    .copyWith(fontWeight: FontWeight.bold)),
+                style:
+                    Constants.headline5.copyWith(fontWeight: FontWeight.bold)),
             Text(
               "$formattedDateOpened",
               style: Theme.of(context).textTheme.overline,
@@ -68,11 +67,11 @@ class TabModal extends StatelessWidget {
               children: <Widget>[
                 Text(
                   "${this.tab["description"]}",
-                  style: Theme.of(context).textTheme.subtitle2,
+                  style: Constants.subtitle2,
                 ),
                 Text(
                   "${Provider.of<SettingsState>(context).selectedCurrency} $displayAmount",
-                  style: Theme.of(context).textTheme.subtitle2,
+                  style: Constants.subtitle2,
                 ),
               ],
             ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:tabs/services/auth.dart';
+import 'package:tabs/utils/constants.dart';
 import './home.dart';
 
 class Register extends StatefulWidget {
@@ -79,9 +80,7 @@ class _RegisterState extends State<Register> {
                       children: <Widget>[
                         Text(
                           "Create Account",
-                          style: Theme.of(context)
-                              .textTheme
-                              .headline4
+                          style: Constants.headline4
                               .copyWith(color: Theme.of(context).primaryColor),
                         ),
                         SizedBox(height: 36),

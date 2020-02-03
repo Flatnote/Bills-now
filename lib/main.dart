@@ -9,6 +9,7 @@ import 'package:tabs/screens/register.dart';
 import 'package:tabs/screens/settings.dart';
 import 'package:tabs/screens/welcome.dart';
 import 'package:tabs/services/auth.dart';
+import 'package:tabs/utils/constants.dart';
 
 void main() => runApp(App());
 
@@ -28,12 +29,6 @@ class App extends StatelessWidget {
           appBarTheme: AppBarTheme(color: Colors.white),
           fontFamily: 'Rubik',
           textTheme: TextTheme(
-            headline4:
-                TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
-            headline3: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w700,
-            ),
             button: TextStyle(color: Colors.white),
           ),
           buttonTheme: ButtonThemeData(
@@ -76,7 +71,7 @@ class App extends StatelessWidget {
             } else {
               return Text(
                 "Tabs",
-                style: Theme.of(context).textTheme.headline4,
+                style: Constants.headline4,
               );
             }
           },
